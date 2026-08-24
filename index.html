@@ -9,11 +9,478 @@
 
 		liveChat('init', 'b17dd433-c43c-436d-be9a-913122089e1f');
 		</script>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Meridian Bank — Banking that moves with you</title>
+		<style>
+			:root {
+				--primary: #0c80bb;
+				--primary-dark: #09689a;
+				--secondary: #edf4fa;
+				--text: #123044;
+				--muted: #5a7388;
+				--white: #ffffff;
+				--radius: 16px;
+			}
 
+			* {
+				box-sizing: border-box;
+				margin: 0;
+				padding: 0;
+			}
 
+			html {
+				scroll-behavior: smooth;
+			}
+
+			body {
+				font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+				color: var(--text);
+				background: var(--white);
+				line-height: 1.6;
+			}
+
+			img {
+				max-width: 100%;
+				height: auto;
+				display: block;
+			}
+
+			a {
+				color: inherit;
+				text-decoration: none;
+			}
+
+			.container {
+				width: min(1120px, calc(100% - 40px));
+				margin: 0 auto;
+			}
+
+			.btn {
+				display: inline-flex;
+				align-items: center;
+				justify-content: center;
+				gap: 8px;
+				padding: 12px 22px;
+				border-radius: 999px;
+				border: 0;
+				font-weight: 600;
+				font-size: 0.95rem;
+				cursor: pointer;
+				transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+			}
+
+			.btn:hover {
+				transform: translateY(-1px);
+			}
+
+			.btn-primary {
+				background: var(--primary);
+				color: var(--white);
+				box-shadow: 0 8px 20px rgba(12, 128, 187, 0.22);
+			}
+
+			.btn-primary:hover {
+				background: var(--primary-dark);
+			}
+
+			.btn-ghost {
+				background: transparent;
+				color: var(--primary);
+				border: 1px solid rgba(12, 128, 187, 0.25);
+			}
+
+			.btn-ghost:hover {
+				background: var(--secondary);
+			}
+
+			header {
+				position: sticky;
+				top: 0;
+				z-index: 20;
+				background: rgba(255, 255, 255, 0.92);
+				backdrop-filter: blur(12px);
+				border-bottom: 1px solid rgba(12, 128, 187, 0.08);
+			}
+
+			.nav {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				gap: 24px;
+				padding: 14px 0;
+			}
+
+			.brand {
+				display: flex;
+				align-items: center;
+				gap: 12px;
+				font-weight: 700;
+				letter-spacing: -0.02em;
+			}
+
+			.brand img {
+				height: 36px;
+				width: auto;
+			}
+
+			.nav-links {
+				display: flex;
+				align-items: center;
+				gap: 28px;
+				list-style: none;
+				color: var(--muted);
+				font-weight: 600;
+				font-size: 0.95rem;
+			}
+
+			.nav-links a:hover {
+				color: var(--primary);
+			}
+
+			.hero {
+				background: linear-gradient(180deg, var(--secondary) 0%, #ffffff 100%);
+				padding: 72px 0 48px;
+			}
+
+			.hero-grid {
+				display: grid;
+				grid-template-columns: 1.05fr 0.95fr;
+				gap: 48px;
+				align-items: center;
+			}
+
+			.eyebrow {
+				display: inline-block;
+				margin-bottom: 14px;
+				padding: 6px 12px;
+				border-radius: 999px;
+				background: rgba(12, 128, 187, 0.1);
+				color: var(--primary);
+				font-size: 0.8rem;
+				font-weight: 700;
+				letter-spacing: 0.04em;
+				text-transform: uppercase;
+			}
+
+			h1 {
+				font-size: clamp(2.2rem, 4vw, 3.4rem);
+				line-height: 1.15;
+				letter-spacing: -0.03em;
+				margin-bottom: 16px;
+			}
+
+			.lead {
+				color: var(--muted);
+				font-size: 1.1rem;
+				max-width: 36rem;
+				margin-bottom: 28px;
+			}
+
+			.hero-actions {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 12px;
+				margin-bottom: 36px;
+			}
+
+			.stats {
+				display: grid;
+				grid-template-columns: repeat(3, minmax(0, 1fr));
+				gap: 16px;
+			}
+
+			.stat {
+				background: var(--white);
+				border-radius: 14px;
+				padding: 14px 16px;
+				box-shadow: 0 8px 24px rgba(18, 48, 68, 0.05);
+			}
+
+			.stat strong {
+				display: block;
+				color: var(--primary);
+				font-size: 1.25rem;
+			}
+
+			.stat span {
+				color: var(--muted);
+				font-size: 0.85rem;
+			}
+
+			.hero-visual {
+				background: var(--white);
+				border-radius: 28px;
+				padding: 16px;
+				box-shadow: 0 24px 60px rgba(12, 128, 187, 0.12);
+			}
+
+			.hero-visual img {
+				width: 100%;
+				border-radius: 20px;
+			}
+
+			section {
+				padding: 72px 0;
+			}
+
+			.section-head {
+				max-width: 38rem;
+				margin-bottom: 36px;
+			}
+
+			h2 {
+				font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+				letter-spacing: -0.03em;
+				margin-bottom: 10px;
+			}
+
+			.cards {
+				display: grid;
+				grid-template-columns: repeat(3, minmax(0, 1fr));
+				gap: 20px;
+			}
+
+			.card {
+				background: var(--secondary);
+				border-radius: var(--radius);
+				padding: 22px;
+			}
+
+			.card img {
+				width: 100%;
+				border-radius: 12px;
+				margin-bottom: 18px;
+			}
+
+			.card h3 {
+				margin-bottom: 8px;
+			}
+
+			.card p {
+				color: var(--muted);
+				font-size: 0.95rem;
+			}
+
+			.app {
+				background: var(--secondary);
+			}
+
+			.app-grid {
+				display: grid;
+				grid-template-columns: 0.8fr 1.2fr;
+				gap: 48px;
+				align-items: center;
+			}
+
+			.app-phone {
+				max-width: 280px;
+				margin: 0 auto;
+			}
+
+			.app-list {
+				list-style: none;
+				display: grid;
+				gap: 16px;
+			}
+
+			.app-list li {
+				background: var(--white);
+				border-radius: 14px;
+				padding: 16px 18px;
+			}
+
+			.app-list strong {
+				display: block;
+				margin-bottom: 4px;
+			}
+
+			.cta {
+				text-align: center;
+				background: var(--primary);
+				color: var(--white);
+				border-radius: 28px;
+				padding: 48px 32px;
+			}
+
+			.cta p {
+				opacity: 0.9;
+				margin: 8px auto 24px;
+				max-width: 36rem;
+			}
+
+			.cta .btn-primary {
+				background: var(--white);
+				color: var(--primary);
+				box-shadow: none;
+			}
+
+			footer {
+				padding: 36px 0 48px;
+				color: var(--muted);
+				border-top: 1px solid rgba(12, 128, 187, 0.08);
+			}
+
+			.footer-row {
+				display: flex;
+				justify-content: space-between;
+				gap: 16px;
+				flex-wrap: wrap;
+			}
+
+			@media (max-width: 860px) {
+				.nav-links {
+					display: none;
+				}
+
+				.hero-grid,
+				.cards,
+				.app-grid,
+				.stats {
+					grid-template-columns: 1fr;
+				}
+
+				.hero {
+					padding-top: 40px;
+				}
+			}
+		</style>
 	</head>
-
+	
 	<body>
-		<h1>Task</h1>
+		<header>
+			<div class="container nav">
+				<a class="brand" href="#top">
+					<img src="assets/logo.svg" alt="Meridian Bank logo placeholder">
+					<span>Meridian Bank</span>
+				</a>
+				<ul class="nav-links">
+					<li><a href="#accounts">Accounts</a></li>
+					<li><a href="#cards">Cards</a></li>
+					<li><a href="#app">App</a></li>
+					<li><a href="#support">Support</a></li>
+				</ul>
+				<a class="btn btn-primary" href="#open">Open an account</a>
+			</div>
+		</header>
+
+		<main id="top">
+			<section class="hero">
+				<div class="container hero-grid">
+					<div>
+						<span class="eyebrow">Personal &amp; business banking</span>
+						<h1>Banking that stays clear, calm, and close at hand.</h1>
+						<p class="lead">Meridian Bank helps you save, spend, and grow with straightforward accounts, thoughtful tools, and people you can reach when you need them.</p>
+						<div class="hero-actions">
+							<a class="btn btn-primary" href="#open">Get started</a>
+							<a class="btn btn-ghost" href="#accounts">Explore products</a>
+						</div>
+						<div class="stats">
+							<div class="stat"><strong>2.1M+</strong><span>customers</span></div>
+							<div class="stat"><strong>4.9</strong><span>app rating</span></div>
+							<div class="stat"><strong>24/7</strong><span>live support</span></div>
+						</div>
+					</div>
+					<div class="hero-visual">
+						<img src="assets/hero.svg" alt="Hero image placeholder">
+					</div>
+				</div>
+			</section>
+
+			<section id="accounts">
+				<div class="container">
+					<div class="section-head">
+						<h2>Accounts built around everyday life</h2>
+						<p class="lead">From first paychecks to long-term plans, choose a structure that stays simple as your needs change.</p>
+					</div>
+					<div class="cards">
+						<article class="card">
+							<img src="assets/card.svg" alt="Checking account image placeholder">
+							<h3>Everyday checking</h3>
+							<p>No monthly fee, instant alerts, and transfers that land when you expect them to.</p>
+						</article>
+						<article class="card">
+							<img src="assets/card.svg" alt="Savings account image placeholder">
+							<h3>Growth savings</h3>
+							<p>Set goals, automate deposits, and watch progress without extra paperwork.</p>
+						</article>
+						<article class="card">
+							<img src="assets/card.svg" alt="Business account image placeholder">
+							<h3>Business essentials</h3>
+							<p>Invoicing, payroll-ready transfers, and a dedicated banker when you scale.</p>
+						</article>
+					</div>
+				</div>
+			</section>
+
+			<section id="cards">
+				<div class="container">
+					<div class="section-head">
+						<h2>A card that stays out of the way</h2>
+						<p class="lead">Contactless payments, travel coverage, and spending insights that feel useful—not noisy.</p>
+					</div>
+					<div class="cards">
+						<article class="card">
+							<img src="assets/card.svg" alt="Debit card image placeholder">
+							<h3>Meridian Debit</h3>
+							<p>Worldwide acceptance, freeze in one tap, and cash back on the categories you use most.</p>
+						</article>
+						<article class="card">
+							<img src="assets/card.svg" alt="Credit card image placeholder">
+							<h3>Meridian Credit</h3>
+							<p>Clear rates, no annual fee on the starter card, and rewards you can redeem instantly.</p>
+						</article>
+						<article class="card">
+							<img src="assets/card.svg" alt="Travel card image placeholder">
+							<h3>Travel+</h3>
+							<p>No foreign transaction fees and lounge access on qualifying itineraries.</p>
+						</article>
+					</div>
+				</div>
+			</section>
+
+			<section class="app" id="app">
+				<div class="container app-grid">
+					<div class="app-phone">
+						<img src="assets/app.svg" alt="Mobile app placeholder">
+					</div>
+					<div>
+						<h2>Your bank, in your pocket</h2>
+						<p class="lead">Move money, lock a card, or talk to a person—without hunting through menus.</p>
+						<ul class="app-list">
+							<li>
+								<strong>Instant insight</strong>
+								Spend, save, and upcoming bills in one glance.
+							</li>
+							<li>
+								<strong>Secure by default</strong>
+								Biometrics, real-time fraud alerts, and one-tap card freeze.
+							</li>
+							<li id="support">
+								<strong>Human help, anytime</strong>
+								Message a banker in the app or start a live chat from this page.
+							</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+
+			<section>
+				<div class="container">
+					<div class="cta" id="open">
+						<h2>Open your Meridian account in minutes</h2>
+						<p>Bring a photo ID and a few details. We’ll walk you through the rest—online or with a banker.</p>
+						<a class="btn btn-primary" href="#top">Start application</a>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<footer>
+			<div class="container footer-row">
+				<span>© 2026 Meridian Bank. Member FDIC. Equal Housing Lender.</span>
+				<span>Placeholder assets — replace with brand photography.</span>
+			</div>
+		</footer>
 	</body>
 </html>
