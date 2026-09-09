@@ -1,487 +1,830 @@
-<html>
-	<head>
-		<link href="assets/logo.png" rel="icon">
-		<script>
-		(function(I,n,f,o,b,i,p){
-		I[b]=I[b]||function(){(I[b].q=I[b].q||[]).push(arguments)};
-		I[b].t=1*new Date();i=n.createElement(f);i.async=1;i.src=o;
-		p=n.getElementsByTagName(f)[0];p.parentNode.insertBefore(i,p)})
-		(window,document,'script','https://livechat.infobip.com/widget.js','liveChat');
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Return Policy &amp; FAQ | Nova Shoes</title>
+	<link rel="icon" href="nova_assets/nova%20shoes.png">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet">
+	<style>
+		:root {
+			--coral: #d64557;
+			--coral-dark: #b73848;
+			--coral-soft: rgba(214, 69, 87, 0.12);
+			--cream: #f7f4ee;
+			--cream-deep: #efe8dc;
+			--white: #fffcf7;
+			--ink: #2c2a28;
+			--muted: #6d6760;
+			--line: rgba(44, 42, 40, 0.08);
+			--shadow: 0 18px 50px rgba(44, 42, 40, 0.08);
+			--radius: 20px;
+			--header-h: 76px;
+		}
 
-		liveChat('init', 'b17dd433-c43c-436d-be9a-913122089e1f');
-		</script>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Meridian Bank — Banking that moves with you</title>
-		<style>
-			:root {
-				--primary: #0c80bb;
-				--primary-dark: #09689a;
-				--secondary: #edf4fa;
-				--text: #123044;
-				--muted: #5a7388;
-				--white: #ffffff;
-				--radius: 16px;
-			}
+		* { box-sizing: border-box; margin: 0; padding: 0; }
 
-			* {
-				box-sizing: border-box;
-				margin: 0;
-				padding: 0;
-			}
+		html { scroll-behavior: smooth; scroll-padding-top: calc(var(--header-h) + 16px); }
 
-			html {
-				scroll-behavior: smooth;
-			}
+		body {
+			font-family: "DM Sans", system-ui, sans-serif;
+			background: var(--cream);
+			color: var(--ink);
+			line-height: 1.65;
+			min-height: 100vh;
+		}
 
-			body {
-				font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
-				color: var(--text);
-				background: var(--white);
-				line-height: 1.6;
-			}
+		img { max-width: 100%; display: block; }
 
-			img {
-				max-width: 100%;
-				height: auto;
-				display: block;
-			}
+		a { color: inherit; text-decoration: none; }
 
-			a {
-				color: inherit;
-				text-decoration: none;
-			}
+		.wrap { width: min(1180px, calc(100% - 40px)); margin: 0 auto; }
 
-			.container {
-				width: min(1120px, calc(100% - 40px));
-				margin: 0 auto;
-			}
+		header {
+			position: sticky;
+			top: 0;
+			z-index: 40;
+			height: var(--header-h);
+			background: rgba(247, 244, 238, 0.88);
+			backdrop-filter: blur(16px);
+			border-bottom: 1px solid var(--line);
+		}
 
-			.btn {
-				display: inline-flex;
-				align-items: center;
-				justify-content: center;
-				gap: 8px;
-				padding: 12px 22px;
-				border-radius: 999px;
-				border: 0;
-				font-weight: 600;
-				font-size: 0.95rem;
-				cursor: pointer;
-				transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
-			}
+		.nav {
+			height: var(--header-h);
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			gap: 20px;
+		}
 
-			.btn:hover {
-				transform: translateY(-1px);
-			}
+		.brand {
+			display: flex;
+			align-items: center;
+			gap: 12px;
+			min-width: 0;
+		}
 
-			.btn-primary {
-				background: var(--primary);
-				color: var(--white);
-				box-shadow: 0 8px 20px rgba(12, 128, 187, 0.22);
-			}
+		.brand img {
+			width: 44px;
+			height: 44px;
+			object-fit: cover;
+			border-radius: 50%;
+			background: var(--white);
+			border: 1px solid var(--line);
+		}
 
-			.btn-primary:hover {
-				background: var(--primary-dark);
-			}
+		.brand-mark {
+			width: 44px;
+			height: 44px;
+			border-radius: 50%;
+			border: 1.5px solid var(--coral);
+			display: grid;
+			place-items: center;
+			color: var(--coral);
+			flex-shrink: 0;
+		}
 
-			.btn-ghost {
-				background: transparent;
-				color: var(--primary);
-				border: 1px solid rgba(12, 128, 187, 0.25);
-			}
+		.brand strong {
+			font-family: Outfit, sans-serif;
+			letter-spacing: 0.14em;
+			font-size: 0.95rem;
+		}
 
-			.btn-ghost:hover {
-				background: var(--secondary);
-			}
+		.brand small {
+			display: block;
+			color: var(--muted);
+			letter-spacing: 0.08em;
+			font-size: 0.62rem;
+			text-transform: uppercase;
+		}
 
-			header {
-				position: sticky;
-				top: 0;
-				z-index: 20;
-				background: rgba(255, 255, 255, 0.92);
-				backdrop-filter: blur(12px);
-				border-bottom: 1px solid rgba(12, 128, 187, 0.08);
-			}
+		.nav-links {
+			display: flex;
+			align-items: center;
+			gap: 22px;
+			list-style: none;
+			color: var(--muted);
+			font-weight: 500;
+			font-size: 0.95rem;
+		}
 
+		.nav-links a:hover,
+		.nav-links a.active { color: var(--coral); }
+
+		.btn {
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			gap: 8px;
+			padding: 11px 20px;
+			border-radius: 999px;
+			border: 0;
+			font: inherit;
+			font-weight: 600;
+			cursor: pointer;
+			transition: 0.2s ease;
+		}
+
+		.btn-primary {
+			background: var(--coral);
+			color: #fff;
+			box-shadow: 0 10px 24px rgba(214, 69, 87, 0.28);
+		}
+
+		.btn-primary:hover { background: var(--coral-dark); transform: translateY(-1px); }
+
+		.btn-ghost {
+			background: transparent;
+			color: var(--coral);
+			border: 1px solid rgba(214, 69, 87, 0.28);
+		}
+
+		.btn-ghost:hover { background: var(--coral-soft); }
+
+		.hero {
+			padding: 56px 0 28px;
+		}
+
+		.eyebrow {
+			display: inline-block;
+			color: var(--coral);
+			font-weight: 700;
+			letter-spacing: 0.16em;
+			text-transform: uppercase;
+			font-size: 0.72rem;
+			margin-bottom: 12px;
+		}
+
+		h1, h2, h3, .font-display { font-family: Outfit, sans-serif; letter-spacing: -0.03em; }
+
+		h1 {
+			font-size: clamp(2rem, 4vw, 3.3rem);
+			line-height: 1.12;
+			max-width: 14ch;
+			margin-bottom: 14px;
+		}
+
+		.lede {
+			max-width: 44rem;
+			color: var(--muted);
+			font-size: 1.05rem;
+			margin-bottom: 28px;
+		}
+
+		.hero-top {
+			display: grid;
+			grid-template-columns: 1.2fr 0.8fr;
+			gap: 32px;
+			align-items: end;
+		}
+
+		.effective {
+			background: var(--white);
+			border: 1px solid var(--line);
+			border-radius: 18px;
+			padding: 18px 20px;
+			box-shadow: var(--shadow);
+		}
+
+		.effective span {
+			display: block;
+			font-size: 0.75rem;
+			letter-spacing: 0.12em;
+			text-transform: uppercase;
+			color: var(--muted);
+			margin-bottom: 4px;
+		}
+
+		.highlights {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			gap: 16px;
+			margin-top: 28px;
+		}
+
+		.hl {
+			background: var(--white);
+			border-radius: var(--radius);
+			padding: 20px;
+			border: 1px solid var(--line);
+		}
+
+		.hl b {
+			display: block;
+			color: var(--coral);
+			font-family: Outfit, sans-serif;
+			font-size: 1.45rem;
+			margin-bottom: 4px;
+		}
+
+		.hl p { color: var(--muted); font-size: 0.92rem; }
+
+		.tabs {
+			display: flex;
+			gap: 10px;
+			margin: 36px 0 22px;
+			background: var(--cream-deep);
+			padding: 6px;
+			border-radius: 999px;
+			width: fit-content;
+		}
+
+		.tab-btn {
+			border: 0;
+			background: transparent;
+			padding: 10px 18px;
+			border-radius: 999px;
+			font: inherit;
+			font-weight: 600;
+			color: var(--muted);
+			cursor: pointer;
+		}
+
+		.tab-btn.active {
+			background: var(--white);
+			color: var(--ink);
+			box-shadow: 0 6px 16px rgba(44, 42, 40, 0.06);
+		}
+
+		.layout {
+			display: grid;
+			grid-template-columns: 240px 1fr;
+			gap: 28px;
+			align-items: start;
+			padding-bottom: 72px;
+		}
+
+		.toc {
+			position: sticky;
+			top: calc(var(--header-h) + 16px);
+			background: var(--white);
+			border: 1px solid var(--line);
+			border-radius: var(--radius);
+			padding: 18px;
+		}
+
+		.toc p {
+			font-size: 0.72rem;
+			letter-spacing: 0.14em;
+			text-transform: uppercase;
+			color: var(--muted);
+			margin-bottom: 10px;
+			font-weight: 700;
+		}
+
+		.toc a {
+			display: block;
+			padding: 8px 10px;
+			border-radius: 10px;
+			color: var(--muted);
+			font-size: 0.9rem;
+			font-weight: 500;
+		}
+
+		.toc a:hover,
+		.toc a.active {
+			background: var(--coral-soft);
+			color: var(--coral);
+		}
+
+		.panel { display: none; }
+		.panel.active { display: block; }
+
+		.card {
+			background: var(--white);
+			border: 1px solid var(--line);
+			border-radius: 24px;
+			padding: 28px 30px;
+			box-shadow: var(--shadow);
+			margin-bottom: 18px;
+		}
+
+		.card h2 {
+			font-size: 1.35rem;
+			margin-bottom: 12px;
+		}
+
+		.card h3 {
+			font-size: 1.05rem;
+			margin: 18px 0 8px;
+		}
+
+		.card p + p { margin-top: 10px; }
+
+		.card ul, .card ol {
+			margin: 12px 0 0 1.15rem;
+			color: var(--ink);
+		}
+
+		.card li { margin: 6px 0; }
+
+		.note {
+			background: var(--coral-soft);
+			border-radius: 14px;
+			padding: 14px 16px;
+			margin-top: 14px;
+			color: var(--coral-dark);
+			font-weight: 500;
+		}
+
+		.faq-toolbar {
+			display: flex;
+			gap: 12px;
+			flex-wrap: wrap;
+			margin-bottom: 16px;
+		}
+
+		.search {
+			flex: 1;
+			min-width: 220px;
+			background: var(--white);
+			border: 1px solid var(--line);
+			border-radius: 999px;
+			padding: 12px 16px;
+			display: flex;
+			align-items: center;
+			gap: 10px;
+		}
+
+		.search input {
+			border: 0;
+			outline: 0;
+			width: 100%;
+			background: transparent;
+			font: inherit;
+			color: var(--ink);
+		}
+
+		.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+
+		.chip {
+			border: 1px solid var(--line);
+			background: var(--white);
+			border-radius: 999px;
+			padding: 8px 14px;
+			font: inherit;
+			font-weight: 600;
+			font-size: 0.85rem;
+			color: var(--muted);
+			cursor: pointer;
+		}
+
+		.chip.active {
+			background: var(--coral);
+			border-color: var(--coral);
+			color: #fff;
+		}
+
+		.faq-group { margin-bottom: 22px; }
+
+		.faq-group h2 {
+			font-size: 1.2rem;
+			margin: 8px 0 12px;
+		}
+
+		details {
+			background: var(--white);
+			border: 1px solid var(--line);
+			border-radius: 16px;
+			padding: 0 18px;
+			margin-bottom: 10px;
+		}
+
+		details[open] { border-color: rgba(214, 69, 87, 0.28); }
+
+		summary {
+			cursor: pointer;
+			list-style: none;
+			padding: 16px 0;
+			font-weight: 600;
+			display: flex;
+			justify-content: space-between;
+			gap: 16px;
+			align-items: center;
+		}
+
+		summary::-webkit-details-marker { display: none; }
+
+		summary::after {
+			content: "+";
+			color: var(--coral);
+			font-size: 1.3rem;
+			font-weight: 500;
+			line-height: 1;
+		}
+
+		details[open] summary::after { content: "–"; }
+
+		.answer {
+			padding: 0 0 16px;
+			color: var(--muted);
+			border-top: 1px solid var(--line);
+			padding-top: 12px;
+		}
+
+		.hidden { display: none !important; }
+
+		.empty {
+			text-align: center;
+			padding: 40px 16px;
+			color: var(--muted);
+		}
+
+		.cta {
+			background: linear-gradient(135deg, #d64557, #b73848);
+			color: #fff;
+			border-radius: 28px;
+			padding: 42px 36px;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			gap: 24px;
+			margin-bottom: 56px;
+		}
+
+		.cta p { opacity: 0.92; margin-top: 6px; max-width: 36rem; }
+
+		.cta .btn-primary {
+			background: #fff;
+			color: var(--coral);
+			box-shadow: none;
+			white-space: nowrap;
+		}
+
+		footer {
+			border-top: 1px solid var(--line);
+			padding: 28px 0 40px;
+			color: var(--muted);
+			font-size: 0.92rem;
+		}
+
+		.footer-row {
+			display: flex;
+			justify-content: space-between;
+			gap: 12px;
+			flex-wrap: wrap;
+			align-items: center;
+		}
+
+		.layout.faq-mode { grid-template-columns: 1fr; }
+		.layout.faq-mode .toc { display: none; }
+
+		.nav-cta { flex-shrink: 0; }
+
+		@media (max-width: 860px) {
+			header { height: auto; }
 			.nav {
-				display: flex;
-				align-items: center;
-				justify-content: space-between;
-				gap: 24px;
-				padding: 14px 0;
+				height: auto;
+				padding: 12px 0;
+				flex-wrap: wrap;
 			}
-
-			.brand {
-				display: flex;
-				align-items: center;
-				gap: 12px;
-				font-weight: 700;
-				letter-spacing: -0.02em;
-			}
-
-			.brand img {
-				height: 36px;
-				width: auto;
-			}
-
 			.nav-links {
-				display: flex;
-				align-items: center;
-				gap: 28px;
-				list-style: none;
-				color: var(--muted);
-				font-weight: 600;
-				font-size: 0.95rem;
-			}
-
-			.nav-links a:hover {
-				color: var(--primary);
-			}
-
-			.hero {
-				background: linear-gradient(180deg, var(--secondary) 0%, #ffffff 100%);
-				padding: 72px 0 48px;
-			}
-
-			.hero-grid {
-				display: grid;
-				grid-template-columns: 1.05fr 0.95fr;
-				gap: 48px;
-				align-items: center;
-			}
-
-			.eyebrow {
-				display: inline-block;
-				margin-bottom: 14px;
-				padding: 6px 12px;
-				border-radius: 999px;
-				background: rgba(12, 128, 187, 0.1);
-				color: var(--primary);
-				font-size: 0.8rem;
-				font-weight: 700;
-				letter-spacing: 0.04em;
-				text-transform: uppercase;
-			}
-
-			h1 {
-				font-size: clamp(2.2rem, 4vw, 3.4rem);
-				line-height: 1.15;
-				letter-spacing: -0.03em;
-				margin-bottom: 16px;
-			}
-
-			.lead {
-				color: var(--muted);
-				font-size: 1.1rem;
-				max-width: 36rem;
-				margin-bottom: 28px;
-			}
-
-			.hero-actions {
-				display: flex;
-				flex-wrap: wrap;
-				gap: 12px;
-				margin-bottom: 36px;
-			}
-
-			.stats {
-				display: grid;
-				grid-template-columns: repeat(3, minmax(0, 1fr));
-				gap: 16px;
-			}
-
-			.stat {
-				background: var(--white);
-				border-radius: 14px;
-				padding: 14px 16px;
-				box-shadow: 0 8px 24px rgba(18, 48, 68, 0.05);
-			}
-
-			.stat strong {
-				display: block;
-				color: var(--primary);
-				font-size: 1.25rem;
-			}
-
-			.stat span {
-				color: var(--muted);
-				font-size: 0.85rem;
-			}
-
-			.hero-visual {
-				background: var(--white);
-				border-radius: 28px;
-				padding: 16px;
-				box-shadow: 0 24px 60px rgba(12, 128, 187, 0.12);
-			}
-
-			.hero-visual img {
+				order: 3;
 				width: 100%;
-				border-radius: 20px;
-			}
-
-			section {
-				padding: 72px 0;
-			}
-
-			.section-head {
-				max-width: 38rem;
-				margin-bottom: 36px;
-			}
-
-			h2 {
-				font-size: clamp(1.6rem, 2.5vw, 2.2rem);
-				letter-spacing: -0.03em;
-				margin-bottom: 10px;
-			}
-
-			.cards {
-				display: grid;
-				grid-template-columns: repeat(3, minmax(0, 1fr));
-				gap: 20px;
-			}
-
-			.card {
-				background: var(--secondary);
-				border-radius: var(--radius);
-				padding: 22px;
-			}
-
-			.card img {
-				width: 100%;
-				border-radius: 12px;
-				margin-bottom: 18px;
-			}
-
-			.card h3 {
-				margin-bottom: 8px;
-			}
-
-			.card p {
-				color: var(--muted);
-				font-size: 0.95rem;
-			}
-
-			.app {
-				background: var(--secondary);
-			}
-
-			.app-grid {
-				display: grid;
-				grid-template-columns: 0.8fr 1.2fr;
-				gap: 48px;
-				align-items: center;
-			}
-
-			.app-phone {
-				max-width: 280px;
-				margin: 0 auto;
-			}
-
-			.app-list {
-				list-style: none;
-				display: grid;
 				gap: 16px;
+				padding-top: 4px;
+				font-size: 0.9rem;
 			}
+			.hero-top, .layout, .highlights, .cta { grid-template-columns: 1fr; display: grid; }
+			.cta { text-align: left; }
+			.toc { display: none; }
+			.hero { padding-top: 32px; }
+			.card { padding: 22px; }
+			.btn.nav-cta { padding: 9px 14px; font-size: 0.88rem; }
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<div class="wrap nav">
+			<a class="brand" href="index.html">
+				<img src="nova_assets/nova%20shoes.png" alt="Nova Shoes logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">
+				<span class="brand-mark" style="display:none;" aria-hidden="true">
+					<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 15c4-1 7 2 11 1 3-.7 5-3 7-3v3.5A2.5 2.5 0 0 1 18.5 19H8c-2 0-4-1.2-5-4Z"/><path d="M5 15l2-6h5l2 3"/></svg>
+				</span>
+				<span>
+					<strong>NOVA SHOES</strong>
+					<small>Every stride</small>
+				</span>
+			</a>
+			<ul class="nav-links">
+				<li><a href="index.html">Home</a></li>
+				<li><a class="active" href="#policy">Returns</a></li>
+				<li><a href="#faqs">FAQs</a></li>
+				<li><a href="#support">Support</a></li>
+			</ul>
+			<a class="btn btn-primary nav-cta" href="#support">Contact support</a>
+		</div>
+	</header>
 
-			.app-list li {
-				background: var(--white);
-				border-radius: 14px;
-				padding: 16px 18px;
-			}
-
-			.app-list strong {
-				display: block;
-				margin-bottom: 4px;
-			}
-
-			.cta {
-				text-align: center;
-				background: var(--primary);
-				color: var(--white);
-				border-radius: 28px;
-				padding: 48px 32px;
-			}
-
-			.cta p {
-				opacity: 0.9;
-				margin: 8px auto 24px;
-				max-width: 36rem;
-			}
-
-			.cta .btn-primary {
-				background: var(--white);
-				color: var(--primary);
-				box-shadow: none;
-			}
-
-			footer {
-				padding: 36px 0 48px;
-				color: var(--muted);
-				border-top: 1px solid rgba(12, 128, 187, 0.08);
-			}
-
-			.footer-row {
-				display: flex;
-				justify-content: space-between;
-				gap: 16px;
-				flex-wrap: wrap;
-			}
-
-			@media (max-width: 860px) {
-				.nav-links {
-					display: none;
-				}
-
-				.hero-grid,
-				.cards,
-				.app-grid,
-				.stats {
-					grid-template-columns: 1fr;
-				}
-
-				.hero {
-					padding-top: 40px;
-				}
-			}
-		</style>
-	</head>
-	
-	<body>
-		<header>
-			<div class="container nav">
-				<a class="brand" href="#top">
-					<img src="assets/logo.svg" alt="Meridian Bank logo placeholder">
-					<span>Meridian Bank</span>
-				</a>
-				<ul class="nav-links">
-					<li><a href="#accounts">Accounts</a></li>
-					<li><a href="#cards">Cards</a></li>
-					<li><a href="#app">App</a></li>
-					<li><a href="#support">Support</a></li>
-				</ul>
-				<a class="btn btn-primary" href="#open">Open an account</a>
+	<main>
+		<section class="hero wrap">
+			<div class="hero-top">
+				<div>
+					<span class="eyebrow">Care, fit &amp; confidence</span>
+					<h1>Return Policy &amp; FAQs</h1>
+					<p class="lede">At <strong>Nova Shoes</strong>, we want you to be confident in every purchase. If your shoes aren't the right fit or you received an incorrect or defective item, we're here to help.</p>
+				</div>
+				<div class="effective">
+					<span>Effective date</span>
+					<strong>September 9, 2026</strong>
+					<p style="color:var(--muted);font-size:0.9rem;margin-top:6px;">The policy applicable to an order is generally the policy in effect when the order was placed.</p>
+				</div>
 			</div>
-		</header>
+			<div class="highlights">
+				<article class="hl"><b>30 days</b><p>Return or exchange window from delivery, if eligibility conditions are met.</p></article>
+				<article class="hl"><b>7 days</b><p>Contact us quickly for wrong, damaged, or defective items.</p></article>
+				<article class="hl"><b>5 days</b><p>Typical inspection time after we receive your return.</p></article>
+			</div>
+		</section>
 
-		<main id="top">
-			<section class="hero">
-				<div class="container hero-grid">
-					<div>
-						<span class="eyebrow">Personal &amp; business banking</span>
-						<h1>Banking that stays clear, calm, and close at hand.</h1>
-						<p class="lead">Meridian Bank helps you save, spend, and grow with straightforward accounts, thoughtful tools, and people you can reach when you need them.</p>
-						<div class="hero-actions">
-							<a class="btn btn-primary" href="#open">Get started</a>
-							<a class="btn btn-ghost" href="#accounts">Explore products</a>
-						</div>
-						<div class="stats">
-							<div class="stat"><strong>2.1M+</strong><span>customers</span></div>
-							<div class="stat"><strong>4.9</strong><span>app rating</span></div>
-							<div class="stat"><strong>24/7</strong><span>live support</span></div>
-						</div>
-					</div>
-					<div class="hero-visual">
-						<img src="assets/hero.svg" alt="Hero image placeholder">
-					</div>
-				</div>
-			</section>
+		<div class="wrap">
+			<div class="tabs" role="tablist">
+				<button class="tab-btn active" data-tab="policy" type="button">Return policy</button>
+				<button class="tab-btn" data-tab="faqs" type="button">FAQs</button>
+			</div>
+		</div>
 
-			<section id="accounts">
-				<div class="container">
-					<div class="section-head">
-						<h2>Accounts built around everyday life</h2>
-						<p class="lead">From first paychecks to long-term plans, choose a structure that stays simple as your needs change.</p>
-					</div>
-					<div class="cards">
-						<article class="card">
-							<img src="assets/card.svg" alt="Checking account image placeholder">
-							<h3>Everyday checking</h3>
-							<p>No monthly fee, instant alerts, and transfers that land when you expect them to.</p>
-						</article>
-						<article class="card">
-							<img src="assets/card.svg" alt="Savings account image placeholder">
-							<h3>Growth savings</h3>
-							<p>Set goals, automate deposits, and watch progress without extra paperwork.</p>
-						</article>
-						<article class="card">
-							<img src="assets/card.svg" alt="Business account image placeholder">
-							<h3>Business essentials</h3>
-							<p>Invoicing, payroll-ready transfers, and a dedicated banker when you scale.</p>
-						</article>
-					</div>
-				</div>
-			</section>
+		<section class="wrap layout" id="content-layout">
+			<aside class="toc" id="toc">
+				<p>On this page</p>
+				<a href="#s1">1. Eligibility</a>
+				<a href="#s2">2. Reasons for return</a>
+				<a href="#s3">3. Non-returnable items</a>
+				<a href="#s4">4. How to request</a>
+				<a href="#s5">5. Inspection</a>
+				<a href="#s6">6. Refunds</a>
+				<a href="#s7">7. Exchanges</a>
+				<a href="#s8">8. Return shipping</a>
+				<a href="#s9">9. Promotions</a>
+				<a href="#s10">10. Policy changes</a>
+			</aside>
 
-			<section id="cards">
-				<div class="container">
-					<div class="section-head">
-						<h2>A card that stays out of the way</h2>
-						<p class="lead">Contactless payments, travel coverage, and spending insights that feel useful—not noisy.</p>
-					</div>
-					<div class="cards">
-						<article class="card">
-							<img src="assets/card.svg" alt="Debit card image placeholder">
-							<h3>Meridian Debit</h3>
-							<p>Worldwide acceptance, freeze in one tap, and cash back on the categories you use most.</p>
-						</article>
-						<article class="card">
-							<img src="assets/card.svg" alt="Credit card image placeholder">
-							<h3>Meridian Credit</h3>
-							<p>Clear rates, no annual fee on the starter card, and rewards you can redeem instantly.</p>
-						</article>
-						<article class="card">
-							<img src="assets/card.svg" alt="Travel card image placeholder">
-							<h3>Travel+</h3>
-							<p>No foreign transaction fees and lounge access on qualifying itineraries.</p>
-						</article>
-					</div>
-				</div>
-			</section>
-
-			<section class="app" id="app">
-				<div class="container app-grid">
-					<div class="app-phone">
-						<img src="assets/app.svg" alt="Mobile app placeholder">
-					</div>
-					<div>
-						<h2>Your bank, in your pocket</h2>
-						<p class="lead">Move money, lock a card, or talk to a person—without hunting through menus.</p>
-						<ul class="app-list">
-							<li>
-								<strong>Instant insight</strong>
-								Spend, save, and upcoming bills in one glance.
-							</li>
-							<li>
-								<strong>Secure by default</strong>
-								Biometrics, real-time fraud alerts, and one-tap card freeze.
-							</li>
-							<li id="support">
-								<strong>Human help, anytime</strong>
-								Message a banker in the app or start a live chat from this page.
-							</li>
+			<div>
+				<div class="panel active" id="policy">
+					<article class="card" id="s1">
+						<h2>1. Return Eligibility</h2>
+						<p>Items may be returned or exchanged within <strong>30 days of delivery</strong>, provided that:</p>
+						<ul>
+							<li>The shoes are unworn and in their original condition.</li>
+							<li>The original shoe box and packaging are included.</li>
+							<li>All tags, labels, and accessories are intact.</li>
+							<li>The item is not visibly damaged, washed, altered, or customized.</li>
+							<li>Proof of purchase or order information can be provided.</li>
 						</ul>
-					</div>
-				</div>
-			</section>
+						<p class="note">Shoes that have been worn outdoors may not be eligible for return unless the return is due to a manufacturing defect or an incorrect item being shipped.</p>
+					</article>
 
-			<section>
-				<div class="container">
-					<div class="cta" id="open">
-						<h2>Open your Meridian account in minutes</h2>
-						<p>Bring a photo ID and a few details. We’ll walk you through the rest—online or with a banker.</p>
-						<a class="btn btn-primary" href="#top">Start application</a>
-					</div>
-				</div>
-			</section>
-		</main>
+					<article class="card" id="s2">
+						<h2>2. Reasons for Return</h2>
+						<h3>Wrong Size or Fit</h3>
+						<p>If your shoes don't fit properly, you may request a size exchange, subject to availability.</p>
+						<p>If the requested size is unavailable, Nova Shoes may offer a refund or store credit.</p>
+						<h3>Wrong Item Received</h3>
+						<p>If you received an item different from what you ordered, contact us within <strong>7 days of delivery</strong>. Nova Shoes will arrange the appropriate replacement or refund.</p>
+						<h3>Damaged or Defective Item</h3>
+						<p>If your shoes arrive damaged or have a manufacturing defect, contact us within <strong>7 days of delivery</strong> and provide photographs showing the issue.</p>
+						<p>After inspection, Nova Shoes may provide a replacement, exchange, repair, or refund depending on the circumstances.</p>
+						<h3>Change of Mind</h3>
+						<p>Returns due to change of mind may be accepted within the 30-day return period, provided the item meets all return conditions.</p>
+						<p>Return shipping costs for change-of-mind returns may be deducted from the refund or paid by the customer.</p>
+					</article>
 
-		<footer>
-			<div class="container footer-row">
-				<span>© 2026 Meridian Bank. Member FDIC. Equal Housing Lender.</span>
-				<span>Placeholder assets — replace with brand photography.</span>
+					<article class="card" id="s3">
+						<h2>3. Items That Cannot Be Returned</h2>
+						<p>The following items are generally not eligible for return:</p>
+						<ul>
+							<li>Worn or visibly used shoes, except for verified defects.</li>
+							<li>Customized or personalized products.</li>
+							<li>Shoes damaged through improper use or care.</li>
+							<li>Items without their original packaging.</li>
+							<li>Items returned after the 30-day return period.</li>
+							<li>Clearance or final-sale items, unless they are defective or the wrong item was shipped.</li>
+						</ul>
+					</article>
+
+					<article class="card" id="s4">
+						<h2>4. How to Request a Return</h2>
+						<p>To request a return:</p>
+						<ol>
+							<li>Contact Nova Shoes Customer Support through our official support channel.</li>
+							<li>Provide your order number and the reason for the return.</li>
+							<li>Provide photographs if the item is damaged, defective, or incorrect.</li>
+							<li>Wait for return instructions from our Customer Support team.</li>
+							<li>Pack the item securely using its original packaging where possible.</li>
+							<li>Ship the item using the return instructions provided by Nova Shoes.</li>
+						</ol>
+						<p class="note">Do not send an item back without receiving return instructions first.</p>
+					</article>
+
+					<article class="card" id="s5">
+						<h2>5. Inspection Process</h2>
+						<p>Once Nova Shoes receives the returned item, it will be inspected to determine whether it meets the return requirements.</p>
+						<p>The inspection process may take up to <strong>5 business days</strong> after the returned item is received.</p>
+						<p>If the return is approved, Nova Shoes will process the applicable exchange, store credit, or refund.</p>
+						<p>If the return does not meet the eligibility requirements, the item may be returned to the customer.</p>
+					</article>
+
+					<article class="card" id="s6">
+						<h2>6. Refunds</h2>
+						<p>Approved refunds will be issued to the original payment method whenever possible.</p>
+						<p>Depending on the payment provider or financial institution, it may take several additional business days for the refund to appear in the customer's account.</p>
+						<p>Shipping fees are generally non-refundable unless the return is caused by an error on the part of Nova Shoes or the item is confirmed to be defective.</p>
+					</article>
+
+					<article class="card" id="s7">
+						<h2>7. Exchanges</h2>
+						<p>Size exchanges are subject to product availability.</p>
+						<p>Only one exchange request may be permitted per order unless otherwise approved by Nova Shoes Customer Support.</p>
+						<p>If the replacement size is unavailable, the customer may be offered a refund or store credit.</p>
+					</article>
+
+					<article class="card" id="s8">
+						<h2>8. Return Shipping</h2>
+						<p>For returns caused by:</p>
+						<ul>
+							<li>Wrong item shipped by Nova Shoes</li>
+							<li>Confirmed manufacturing defect</li>
+							<li>Damaged item received</li>
+						</ul>
+						<p>Nova Shoes will cover the applicable return shipping costs.</p>
+						<p>For returns caused by:</p>
+						<ul>
+							<li>Incorrect size selected by the customer</li>
+							<li>Change of mind</li>
+							<li>Personal preference</li>
+						</ul>
+						<p>The customer may be responsible for return shipping costs.</p>
+					</article>
+
+					<article class="card" id="s9">
+						<h2>9. Promotional and Discounted Items</h2>
+						<p>Items purchased using promotional discounts may be subject to additional return and exchange conditions.</p>
+						<p>Unless explicitly stated otherwise, discounted items remain eligible for return under the standard return policy.</p>
+						<p>Items marked <strong>"Final Sale"</strong> are not eligible for return or exchange except where required by applicable law.</p>
+					</article>
+
+					<article class="card" id="s10">
+						<h2>10. Policy Changes</h2>
+						<p>Nova Shoes reserves the right to update this Return &amp; Exchange Policy when necessary. The policy applicable to an order will generally be the policy in effect at the time the order was placed.</p>
+						<p>For questions regarding a return or exchange, please contact Nova Shoes Customer Support.</p>
+					</article>
+				</div>
+
+				<div class="panel" id="faqs">
+					<div class="faq-toolbar">
+						<label class="search">
+							<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#6d6760" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3-3"/></svg>
+							<input id="faq-search" type="search" placeholder="Search FAQs..." autocomplete="off">
+						</label>
+						<div class="chips">
+							<button class="chip active" type="button" data-cat="all">All</button>
+							<button class="chip" type="button" data-cat="returns">Orders &amp; Returns</button>
+							<button class="chip" type="button" data-cat="product">Product &amp; Ordering</button>
+							<button class="chip" type="button" data-cat="payments">Payments &amp; Delivery</button>
+						</div>
+					</div>
+
+					<div id="faq-list">
+						<div class="faq-group" data-cat="returns">
+							<h2>Orders &amp; Returns</h2>
+							<details data-q><summary>1. How long do I have to return my shoes?</summary><div class="answer">You can request a return or exchange within <strong>30 days of delivery</strong>, provided the shoes meet our return conditions.</div></details>
+							<details data-q><summary>2. Can I return shoes that I have worn?</summary><div class="answer">Generally, no. Shoes must be unworn and in their original condition. However, if the shoes have a manufacturing defect, contact Customer Support even if you have worn them.</div></details>
+							<details data-q><summary>3. Can I exchange my shoes for another size?</summary><div class="answer">Yes. Size exchanges are available subject to stock availability.</div></details>
+							<details data-q><summary>4. What if my preferred size is no longer available?</summary><div class="answer">If the replacement size is unavailable, Nova Shoes may offer a refund or store credit.</div></details>
+							<details data-q><summary>5. I received the wrong shoes. What should I do?</summary><div class="answer">Contact Customer Support within <strong>7 days of delivery</strong>. Include your order number and photographs of the shoes you received. We will assist with the replacement or refund process.</div></details>
+							<details data-q><summary>6. My shoes arrived damaged. What should I do?</summary><div class="answer">Contact us within <strong>7 days of delivery</strong> and provide photographs clearly showing the damage. Our team will review the issue and provide the appropriate resolution.</div></details>
+							<details data-q><summary>7. Do I need the original shoe box to return an item?</summary><div class="answer">Yes. The original packaging should be included whenever possible. Returns without the original packaging may be rejected or subject to additional review.</div></details>
+							<details data-q><summary>8. How long does a refund take?</summary><div class="answer">Once your return is approved, Nova Shoes will process the refund. The time it takes for the funds to appear in your account depends on your payment provider or bank.</div></details>
+							<details data-q><summary>9. Will my shipping fee be refunded?</summary><div class="answer">Standard shipping fees are generally non-refundable. However, shipping costs may be refunded when the return is caused by an error on our part or a confirmed product defect.</div></details>
+							<details data-q><summary>10. Who pays for return shipping?</summary><div class="answer">Nova Shoes covers return shipping for incorrect, damaged, or confirmed defective items. Customers may be responsible for shipping costs for size changes or change-of-mind returns.</div></details>
+						</div>
+
+						<div class="faq-group" data-cat="product">
+							<h2>Product &amp; Ordering</h2>
+							<details data-q><summary>11. How do I know which shoe size to order?</summary><div class="answer">Check the size guide available on the product page before placing your order. If you're between sizes, contact Customer Support for assistance.</div></details>
+							<details data-q><summary>12. Can I change my order after placing it?</summary><div class="answer">Order changes depend on whether your order has already been processed or shipped. Contact Customer Support as soon as possible if you need to make a change.</div></details>
+							<details data-q><summary>13. Can I cancel my order?</summary><div class="answer">Cancellation requests should be submitted as soon as possible. Orders that have already been processed or shipped may no longer be eligible for cancellation.</div></details>
+							<details data-q><summary>14. Do you sell authentic products?</summary><div class="answer">Yes. All products sold directly by Nova Shoes are authentic Nova Shoes products.</div></details>
+							<details data-q><summary>15. What happens if an item I want is out of stock?</summary><div class="answer">You may check the product page for restock information or contact Customer Support to ask whether the item is expected to become available again.</div></details>
+						</div>
+
+						<div class="faq-group" data-cat="payments">
+							<h2>Payments &amp; Delivery</h2>
+							<details data-q><summary>16. What payment methods do you accept?</summary><div class="answer">Available payment methods are displayed during checkout and may vary depending on your location.</div></details>
+							<details data-q><summary>17. How can I track my order?</summary><div class="answer">Once your order has been shipped, Nova Shoes will provide tracking information through your registered contact details.</div></details>
+							<details data-q><summary>18. What should I do if my order hasn't arrived?</summary><div class="answer">First, check your tracking information. If the package appears delayed or the tracking information has not changed for an extended period, contact Customer Support with your order number.</div></details>
+							<details data-q><summary>19. Can I change my delivery address after placing an order?</summary><div class="answer">Contact Customer Support immediately. Address changes may be possible before the order is shipped but cannot be guaranteed once the shipment has been dispatched.</div></details>
+							<details data-q><summary>20. How can I contact Nova Shoes Customer Support?</summary><div class="answer">Contact us through the official Nova Shoes customer service channel listed on our website. Please include your order number when contacting us about an existing order.</div></details>
+						</div>
+					</div>
+					<p class="empty hidden" id="faq-empty">No FAQs match that search. Try a different keyword.</p>
+				</div>
 			</div>
-		</footer>
-	</body>
+		</section>
+
+		<section class="wrap" id="support">
+			<div class="cta">
+				<div>
+					<h2>Need help with a return?</h2>
+					<p>Reach Nova Shoes Customer Support through our official channel and include your order number. We'll share return instructions before you ship anything back.</p>
+				</div>
+				<a class="btn btn-primary" href="index.html">Back to store</a>
+			</div>
+		</section>
+	</main>
+
+	<footer>
+		<div class="wrap footer-row">
+			<span>© 2026 Nova Shoes. Make a statement with every stride.</span>
+			<span>Return &amp; Exchange Policy</span>
+		</div>
+	</footer>
+
+	<script>
+		const tabBtns = document.querySelectorAll('.tab-btn');
+		const panelPolicy = document.getElementById('policy');
+		const panelFaqs = document.getElementById('faqs');
+		const toc = document.getElementById('toc');
+		const layout = document.getElementById('content-layout');
+
+		function showTab(name) {
+			tabBtns.forEach((btn) => btn.classList.toggle('active', btn.dataset.tab === name));
+			panelPolicy.classList.toggle('active', name === 'policy');
+			panelFaqs.classList.toggle('active', name === 'faqs');
+			layout.classList.toggle('faq-mode', name === 'faqs');
+			if (name === 'faqs') history.replaceState(null, '', '#faqs');
+			else history.replaceState(null, '', '#policy');
+			document.querySelector('.tabs').scrollIntoView({ behavior: 'smooth', block: 'start' });
+		}
+
+		tabBtns.forEach((btn) => btn.addEventListener('click', () => showTab(btn.dataset.tab)));
+
+		if (location.hash === '#faqs' || location.hash === '#support') {
+			if (location.hash === '#faqs') showTab('faqs');
+		}
+
+		document.querySelectorAll('.nav-links a').forEach((link) => {
+			link.addEventListener('click', (e) => {
+				if (link.getAttribute('href') === '#faqs') {
+					e.preventDefault();
+					showTab('faqs');
+					document.getElementById('faqs').scrollIntoView({ behavior: 'smooth', block: 'start' });
+				}
+				if (link.getAttribute('href') === '#policy') {
+					e.preventDefault();
+					showTab('policy');
+					window.scrollTo({ top: 0, behavior: 'smooth' });
+				}
+			});
+		});
+
+		const search = document.getElementById('faq-search');
+		const chips = document.querySelectorAll('.chip');
+		const groups = document.querySelectorAll('.faq-group');
+		const empty = document.getElementById('faq-empty');
+		let cat = 'all';
+
+		function filterFaqs() {
+			const q = (search.value || '').trim().toLowerCase();
+			let visible = 0;
+			groups.forEach((group) => {
+				const matchCat = cat === 'all' || group.dataset.cat === cat;
+				let groupHas = false;
+				group.querySelectorAll('details[data-q]').forEach((item) => {
+					const text = item.textContent.toLowerCase();
+					const matchQ = !q || text.includes(q);
+					const show = matchCat && matchQ;
+					item.classList.toggle('hidden', !show);
+					if (show) {
+						groupHas = true;
+						visible += 1;
+					}
+				});
+				group.classList.toggle('hidden', !matchCat || !groupHas);
+			});
+			empty.classList.toggle('hidden', visible > 0);
+		}
+
+		search.addEventListener('input', filterFaqs);
+		chips.forEach((chip) => chip.addEventListener('click', () => {
+			chips.forEach((c) => c.classList.toggle('active', c === chip));
+			cat = chip.dataset.cat;
+			filterFaqs();
+		}));
+
+		const tocLinks = document.querySelectorAll('#toc a');
+		const sections = [...tocLinks].map((a) => document.querySelector(a.getAttribute('href')));
+		const io = new IntersectionObserver((entries) => {
+			entries.forEach((entry) => {
+				if (!entry.isIntersecting) return;
+				tocLinks.forEach((a) => a.classList.toggle('active', a.getAttribute('href') === '#' + entry.target.id));
+			});
+		}, { rootMargin: '-40% 0px -50% 0px', threshold: 0.1 });
+		sections.forEach((el) => el && io.observe(el));
+	</script>
+</body>
 </html>
