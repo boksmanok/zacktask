@@ -53,6 +53,28 @@ $orders = [
                 'price' => 2500.00
             ]
         ]
+    ],
+
+    'ORD-10003' => [
+        'order_number' => 'ORD-10003',
+        'customer_name' => 'Zack Acosta',
+        'customer_email' => 'zack@example.com',
+        'status' => 'Completed',
+        'total' => 1700.00,
+        'currency' => 'PHP',
+        'created_at' => '2026-09-12 12:00:00',
+        'items' => [
+            [
+                'product' => 'Product D',
+                'quantity' => 1,
+                'price' => 1100.00
+            ],
+            [
+                'product' => 'Product E',
+                'quantity' => 1,
+                'price' => 600.00
+            ]
+        ]
     ]
 ];
 
